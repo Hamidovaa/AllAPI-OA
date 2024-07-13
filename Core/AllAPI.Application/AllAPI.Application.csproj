@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AllAPI.Domain\AllAPI.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
