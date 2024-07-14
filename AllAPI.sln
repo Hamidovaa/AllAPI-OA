@@ -9,15 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{5E06B2C0-980A-42B9-92A2-B963D7F52641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAPI.Application", "Core\AllAPI.Application\AllAPI.Application.csproj", "{61BB57E0-921F-4945-A28F-653B3739F0C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAPI.Application", "Core\AllAPI.Application\AllAPI.Application.csproj", "{61BB57E0-921F-4945-A28F-653B3739F0C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAPI.Domain", "Core\AllAPI.Domain\AllAPI.Domain.csproj", "{023BF9DF-0655-426F-8355-70ACFA6D4296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAPI.Domain", "Core\AllAPI.Domain\AllAPI.Domain.csproj", "{023BF9DF-0655-426F-8355-70ACFA6D4296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAPI.Infrastructure", "Infrastructure\AllAPI.Infrastructure\AllAPI.Infrastructure.csproj", "{C894C35C-AC7B-48F1-B5BE-12F02DF080E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAPI.Infrastructure", "Infrastructure\AllAPI.Infrastructure\AllAPI.Infrastructure.csproj", "{C894C35C-AC7B-48F1-B5BE-12F02DF080E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAPI.Persistance", "Infrastructure\AllAPI.Persistance\AllAPI.Persistance.csproj", "{90CDCFAA-4044-4FA5-B1F0-52ACC17B3EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAPI.Persistance", "Infrastructure\AllAPI.Persistance\AllAPI.Persistance.csproj", "{90CDCFAA-4044-4FA5-B1F0-52ACC17B3EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAPI.API", "Presentation\AllAPI.API\AllAPI.API.csproj", "{3DC5543F-A872-4ABF-A3EF-02AB7F45ACCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAPI.API", "Presentation\AllAPI.API\AllAPI.API.csproj", "{3DC5543F-A872-4ABF-A3EF-02AB7F45ACCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAPI.Mapper", "AllAPI.Mapper\AllAPI.Mapper.csproj", "{8D022504-7E41-4238-8428-BFF9C4FF3AD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3DC5543F-A872-4ABF-A3EF-02AB7F45ACCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC5543F-A872-4ABF-A3EF-02AB7F45ACCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC5543F-A872-4ABF-A3EF-02AB7F45ACCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D022504-7E41-4238-8428-BFF9C4FF3AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D022504-7E41-4238-8428-BFF9C4FF3AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D022504-7E41-4238-8428-BFF9C4FF3AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D022504-7E41-4238-8428-BFF9C4FF3AD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{C894C35C-AC7B-48F1-B5BE-12F02DF080E2} = {ECAB3A24-5E38-4F9C-9544-7E2E809FC39F}
 		{90CDCFAA-4044-4FA5-B1F0-52ACC17B3EC7} = {ECAB3A24-5E38-4F9C-9544-7E2E809FC39F}
 		{3DC5543F-A872-4ABF-A3EF-02AB7F45ACCE} = {5E06B2C0-980A-42B9-92A2-B963D7F52641}
+		{8D022504-7E41-4238-8428-BFF9C4FF3AD4} = {DBBF8D67-361A-45EB-B4E9-5412E6287A26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CFF283F7-7BE3-42B9-8EEA-933059EC6F65}
