@@ -1,7 +1,11 @@
-﻿using AllAPI.Application.Exceptions;
+﻿using AllAPI.Application.Behaviors;
+using AllAPI.Application.Exceptions;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,6 +22,11 @@ namespace AllAPI.Application
             services.AddTransient<ExceptionsMiddleware>();
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
+
+            services.AddValidatorsFromAssembly(assembly);
+            ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("tr");
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehevior<,>));
         }
     }
 }
