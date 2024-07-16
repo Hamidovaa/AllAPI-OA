@@ -40,8 +40,7 @@ namespace AllAPI.Application.Exceptions
         
             List<string> errors = new()
             {
-                $"Error Message:{ exception.Message}",
-                $"Error Description: {exception.InnerException?.ToString()}"
+                $"Error Message:{ exception.Message}"
             };
 
             return httpcontext.Response.WriteAsync(new ExceptionModel
