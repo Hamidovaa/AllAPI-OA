@@ -1,6 +1,7 @@
 using AllAPI.Persistance;
 using AllAPI.Application;
 using AllAPI.Mapper;
+using AllAPI.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.ConfigureExceptionHandlingMiddleware();
 
 app.UseAuthorization();
 
