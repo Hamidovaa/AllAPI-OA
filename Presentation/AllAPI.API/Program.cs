@@ -1,6 +1,7 @@
 using AllAPI.Persistance;
 using AllAPI.Application;
 using AllAPI.Mapper;
+using AllAPI.Infrastructure;
 using AllAPI.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional:true);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 
