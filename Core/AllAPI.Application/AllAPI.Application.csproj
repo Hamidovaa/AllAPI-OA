@@ -27,4 +27,8 @@
     <ProjectReference Include="..\AllAPI.Domain\AllAPI.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\Queries\" />
+  </ItemGroup>
+
 </Project>
