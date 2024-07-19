@@ -43,7 +43,7 @@ namespace AllAPI.Application.Features.Auth.Command.Login
             JwtSecurityToken token = await tokenService.CreateToken(user, roles);
             string refreshToken = tokenService.GenerateRefreshToken();
 
-           _= int.TryParse(configuration["JWT: RefreshTokenValidityInDays"], out int refreshTokenValidityInDays);
+           _= int.TryParse(configuration["JWT:RefreshTokenValidityInDays"], out int refreshTokenValidityInDays);
 
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime=DateTime.Now.AddDays(refreshTokenValidityInDays);
