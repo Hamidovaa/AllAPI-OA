@@ -27,15 +27,7 @@ namespace AllAPI.Application.Features.Products.Queries.GetAllProducts
             var products = await unitOfWork.GetReadRepository<Product>().GetAllAsync(include: x=>x.Include(b=>b.Brand));
 
             var brand= mapper.Map<BrandDto, Brand>(new Brand());
-            //List<GetAllProductsQueryResponse> response = new();
-            //foreach(var product in products)
-            //    response.Add(new GetAllProductsQueryResponse
-            //    {
-            //        Title = product.Title,
-            //        Description = product.Description,
-            //        Discount = product.Discount,
-            //        Price = product.Price - (product.Price* product.Discount/100),
-            //    });  
+            
 
 
             var map=mapper.Map<GetAllProductsQueryResponse, Product>(products);

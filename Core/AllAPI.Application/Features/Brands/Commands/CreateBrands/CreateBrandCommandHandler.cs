@@ -24,7 +24,7 @@ namespace AllAPI.Application.Features.Brands.Commands.CreateBrands
             Faker faker = new("tr");
             List<Brand> brands = new();
             
-            for(int i=0; i<1000000; i++)
+            for(int i=0; i<100; i++)
             {
                 brands.Add(new(faker.Commerce.Department(1)));
             }

@@ -1,4 +1,6 @@
-﻿using AllAPI.Application.Interfacee.Tokens;
+﻿using AllAPI.Application.Interfacee.RedisCache;
+using AllAPI.Application.Interfacee.Tokens;
+using AllAPI.Infrastructure.RedisCache;
 using AllAPI.Infrastructure.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +21,8 @@ namespace AllAPI.Infrastructure
             services.Configure<TokenSettings>(configuration.GetSection("JWT"));
             services.AddTransient<ITokenService, TokenService>();
 
-
+            services.Configure<RedisCacheSettings>(configuration.GetSection("RedisCacheSettings"));
+            services.AddTransient<IRedisCacheService, RedisCacheService>();
             services.AddAuthentication(opt =>
             {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -40,6 +43,7 @@ namespace AllAPI.Infrastructure
                 };
             });
 
+            
            
         }
     }
