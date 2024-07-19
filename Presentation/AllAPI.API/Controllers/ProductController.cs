@@ -1,4 +1,6 @@
-﻿using AllAPI.Application.Features.Products.Command.CreateProducts;
+﻿using AllAPI.Application.Features.Brands.Commands.CreateBrands;
+using AllAPI.Application.Features.Brands.Queries.GetAllBrands;
+using AllAPI.Application.Features.Products.Command.CreateProducts;
 using AllAPI.Application.Features.Products.Command.DeleteProduct;
 using AllAPI.Application.Features.Products.Command.UpdateProduct;
 using AllAPI.Application.Features.Products.Queries.GetAllProducts;
@@ -54,6 +56,24 @@ namespace AllAPI.API.Controllers
             await mediator.Send(request);
 
             return Ok();
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBrand(CreateBrandCommandRequest request)
+        {
+            await mediator.Send(request);
+
+            return Ok();
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetAllBrands()
+        {
+            var response= await mediator.Send(new GetAllBrandsQueryRequest());
+
+            return Ok(response);
 
         }
 
